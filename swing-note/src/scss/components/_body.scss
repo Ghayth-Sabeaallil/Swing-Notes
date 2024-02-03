@@ -1,0 +1,9 @@
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+
+body{
+    background-color: $body-background-color;
+    padding: 1rem 1rem 1rem 1rem;
+    width: 100vw;
+    min-height: 100vh;
+}

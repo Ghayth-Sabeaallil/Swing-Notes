@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+
+body {
+  background-color: #19274A;
+  padding: 1rem 1rem 1rem 1rem;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.readDiv {
+  background-color: white;
+  padding: 1em 1em 1em 1em;
+  min-width: 380px;
+  height: 190px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.readDiv .date {
+  font-family: "PT sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 1em;
+}
+.readDiv .note {
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: black;
+  width: 350px;
+  height: 90px;
+  overflow-y: scroll;
+}
+.readDiv .username {
+  font-family: "PT sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: black;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+.readDiv .uppdate {
+  width: 100px;
+  height: 35px;
+  background-color: #EF4343;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.12px;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #EF4343;
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+}
+.readDiv .delete {
+  width: 70px;
+  height: 18px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.12px;
+  color: black;
+  text-align: center;
+  position: absolute;
+  text-decoration: underline;
+  right: 27px;
+  bottom: 9px;
+}
+
+body .post-icon {
+  position: fixed;
+  right: 35px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.writeDiv {
+  padding: 1em 1em 1em 1em;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 380px;
+}
+.writeDiv .title-input {
+  text-align: left;
+  min-width: 380px;
+  height: 70px;
+  background-color: white;
+  font-family: "PT sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 1em;
+  padding: 0 1rem 0 1rem;
+  border-radius: 5px;
+  border: none;
+}
+.writeDiv .note-input {
+  border-radius: 5px;
+  border: none;
+  min-width: 380px;
+  height: 432px;
+  background-color: white;
+  font-family: "PT sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 1em;
+  padding: 1rem 1rem 1rem 1rem;
+  resize: none;
+}
+.writeDiv .username-input {
+  min-width: 380px;
+  height: 70px;
+  background-color: white;
+  font-family: "PT sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 1em;
+  padding: 0 1rem 0 1rem;
+  border-radius: 5px;
+  border: none;
+}
+.writeDiv .post {
+  min-width: 380px;
+  height: 72px;
+  background-color: #EF4343;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18.12px;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #EF4343;
+}
+
+/*# sourceMappingURL=style.css.map */

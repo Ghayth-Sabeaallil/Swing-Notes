@@ -1,0 +1,6 @@
+@import "../abstracts/color";
+
+@mixin circleGradiant{
+    background-color:$color-circle-radiant-first;
+    background: radial-gradient(circle farthest-corner at center center, $color-circle-radiant-first 11%, $color-circle-radiant-second 20%, $color-circle-radiant-third 50%, $color-circle-radiant-fourth 62%);
+}
