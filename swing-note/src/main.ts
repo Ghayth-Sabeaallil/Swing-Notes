@@ -1,13 +1,13 @@
 import "./style.css";
 
-import { setupWriteDiv } from "./ts/writeDiv.ts";
-import { removeRead } from "./ts/writeDiv.ts";
+import { setupWriteDiv } from "./ts/pages/writePage.ts";
+import { removeRead } from "./ts/pages/writePage.ts";
 
-import { setupReadDiv } from "./ts/readDiv.ts";
-import { removeWrite } from "./ts/readDiv.ts";
+import { setupSearch } from "./ts/pages/readPage.ts";
+import { removeWrite } from "./ts/pages/readPage.ts";
 
-import { setupPostIcon } from "./ts/postIcon.ts";
-import { setupHomeIcon } from "./ts/homeIcon.ts"
+import { setupPostIcon } from "./ts/pages/postIcon.ts";
+import { setupHomeIcon } from "./ts/pages/homeIcon.ts"
 
 
 document.querySelector<HTMLDivElement>(
@@ -23,7 +23,7 @@ export function write() {
 }
 export function read() {
   removeWrite(document.querySelector<HTMLElement>(".container")!)
-  setupReadDiv(document.querySelector<HTMLElement>(".container")!);
+  setupSearch(document.querySelector<HTMLElement>(".container")!);
   setupPostIcon(document.querySelector<HTMLElement>(".container")!);
 }
 

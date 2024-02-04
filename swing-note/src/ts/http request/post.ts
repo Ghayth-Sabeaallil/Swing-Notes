@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiResponse } from "./interfaces";
-import { ApiError } from "./interfaces";
+import { ApiResponse } from "../interface/interfaces";
+import { ApiError } from "../interface/interfaces";
 
 
 export async function postNote(): Promise<ApiResponse | ApiError> {

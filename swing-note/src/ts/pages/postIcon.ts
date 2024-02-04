@@ -1,4 +1,4 @@
-import { write } from "../main";
+import { write } from "../../main";
 
 export function setupPostIcon(element: HTMLElement) {
   let img: HTMLImageElement = document.createElement("img");

@@ -1,11 +1,14 @@
-import { postNote } from "./post";
-import { read } from "../main";
+import { postNote } from "../http request/post";
+import { read } from "../../main";
 
 export function removeRead(element: HTMLElement) {
   let child: any = element.lastElementChild;
   while (element.lastElementChild) {
     element.removeChild(child);
     child = element.lastElementChild;
+  }
+  if (element.classList[0] == "allNote") {
+    element.remove();
   }
 }
 
@@ -46,7 +49,6 @@ function check(): void {
     postNote().then(
       (value) => {
         if (value.message == "Note created!") {
-          console.log("created")
           read();
         }
       },

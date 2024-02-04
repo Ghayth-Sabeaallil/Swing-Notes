@@ -1,4 +1,4 @@
-import { read } from "../main";
+import { read } from "../../main";
 
 export function setupHomeIcon(element: HTMLElement) {
     let img: HTMLImageElement = document.createElement("img");
