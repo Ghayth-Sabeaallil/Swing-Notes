@@ -2,6 +2,7 @@ import { getNotes } from "../http request/get";
 import { getUsername } from "../http request/get";
 import { delNote } from "../http request/delete";
 import { removeRead } from "./writePage";
+import { update } from "../http request/update";
 
 
 let searchClick: number = 0;
@@ -54,6 +55,7 @@ export function setupReadDiv(element: HTMLElement) {
         let btn: HTMLButtonElement = document.createElement("button");
         btn.setAttribute("class", "uppdate");
         btn.innerHTML += "Uppdatera";
+        btn.addEventListener("click", update)
         btn.setAttribute("id", value.notes![i]?.id);
         let pDel: HTMLElement = document.createElement("p");
         pDel.setAttribute("class", "delete");
