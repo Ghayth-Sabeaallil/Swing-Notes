@@ -1,8 +1,8 @@
 export interface Notes {
   title: string;
   note: string;
-  createdAt?: string;
-  id?: string;
+  createdAt: string;
+  id: string;
   username: string;
 }
 
