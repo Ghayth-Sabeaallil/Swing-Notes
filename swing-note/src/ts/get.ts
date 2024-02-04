@@ -5,7 +5,7 @@ import { ApiError } from "./interfaces";
 export async function getAllNotes(): Promise<ApiResponse | ApiError> {
   try {
     const { data } = await axios.get<ApiResponse>(
-      "https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/ada"
+      "https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/ghaythsa"
     );
     return data;
   } catch (error: any) {
