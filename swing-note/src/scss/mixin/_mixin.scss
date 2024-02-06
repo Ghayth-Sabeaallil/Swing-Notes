@@ -1,6 +1,11 @@
-@import "../abstracts/color";
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
 
-@mixin circleGradiant{
-    background-color:$color-circle-radiant-first;
-    background: radial-gradient(circle farthest-corner at center center, $color-circle-radiant-first 11%, $color-circle-radiant-second 20%, $color-circle-radiant-third 50%, $color-circle-radiant-fourth 62%);
-}
+
+@mixin design($font: $font-pt-sans, $fontSize: 12px, $fontWeight: 400, $lineHeight: 18px, $color: $date-color) {
+    font-family: $font-pt-sans;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: $color;
+  }

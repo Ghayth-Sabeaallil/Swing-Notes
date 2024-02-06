@@ -3,6 +3,8 @@ import { ApiResponse } from "../interface/interfaces";
 import { ApiError } from "../interface/interfaces";
 
 let user: string = "";
+
+//fetch data by search on username
 export async function getNotes(): Promise<ApiResponse | ApiError> {
   try {
     const { data } = await axios.get<ApiResponse>(
@@ -17,6 +19,7 @@ export async function getNotes(): Promise<ApiResponse | ApiError> {
   }
 }
 
+//set the username I got from the search input
 export function getUsername(username: string): void {
   user = username;
 }

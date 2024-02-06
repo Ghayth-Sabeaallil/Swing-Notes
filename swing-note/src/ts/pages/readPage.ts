@@ -4,10 +4,11 @@ import { delNote } from "../http request/delete";
 import { removeRead } from "./writePage";
 import { update } from "../http request/update";
 
-
+//cound the number of search 
 let searchClick: number = 0;
 
-
+//setup the search input the top center of the page
+//remove the previous search result using remove childNode 
 export function setupSearch(element: HTMLElement) {
   let searchDiv: HTMLElement = document.createElement("div");
   searchDiv.setAttribute("class", "searchDiv");
@@ -23,7 +24,6 @@ export function setupSearch(element: HTMLElement) {
           removeRead(el);
         }
       }
-
       getUsername(searchInput.value);
       setupReadDiv(element);
       searchClick++;
@@ -33,7 +33,7 @@ export function setupSearch(element: HTMLElement) {
   element.append(searchDiv);
 }
 
-
+//setup the notes div 
 export function setupReadDiv(element: HTMLElement) {
   getNotes().then(
     (value) => {
@@ -67,13 +67,13 @@ export function setupReadDiv(element: HTMLElement) {
       }
       element.append(allNote);
     },
-
     (reason) => {
       console.error(reason); // Error!
     }
   );
 }
 
+//remove the write page
 export function removeWrite(element: HTMLElement) {
   let child: any = element.lastElementChild;
   while (element.lastElementChild) {

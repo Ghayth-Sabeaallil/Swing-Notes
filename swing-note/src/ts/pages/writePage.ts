@@ -1,6 +1,7 @@
 import { postNote } from "../http request/post";
 import { read } from "../../main";
 
+//remvoe the read page
 export function removeRead(element: HTMLElement) {
   let child: any = element.lastElementChild;
   while (element.lastElementChild) {
@@ -12,7 +13,7 @@ export function removeRead(element: HTMLElement) {
   }
 }
 
-
+//setup the write inputs div
 export function setupWriteDiv(element: HTMLElement) {
   let div: HTMLElement = document.createElement("div");
   div.setAttribute("class", "writeDiv");
@@ -41,6 +42,7 @@ export function setupWriteDiv(element: HTMLElement) {
   element.append(div);
 }
 
+//check if all inputs (title, note, username) are not empty
 function check(): void {
   let userName: any = document.querySelector(".username-input");
   let title: any = document.querySelector(".title-input");

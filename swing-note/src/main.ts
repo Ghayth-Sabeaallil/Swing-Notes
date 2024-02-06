@@ -15,12 +15,14 @@ document.querySelector<HTMLDivElement>(
 )!.innerHTML = `<div class="container"></div>`;
 
 
+//create write page and remove read page 
 export function write() {
   removeRead(document.querySelector<HTMLElement>(".container")!);
   setupWriteDiv(document.querySelector<HTMLElement>(".container")!);
   setupHomeIcon(document.querySelector<HTMLElement>(".container")!);
-
 }
+
+//create read page and remove write page 
 export function read() {
   removeWrite(document.querySelector<HTMLElement>(".container")!)
   setupSearch(document.querySelector<HTMLElement>(".container")!);
