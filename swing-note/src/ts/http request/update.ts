@@ -6,11 +6,10 @@ import { ApiError } from "../interface/interfaces";
 let edit: boolean = false;
 
 //update the note using put and the info from the note input
-export async function updateNote(event: any): Promise<ApiResponse | ApiError> {
-    let note: HTMLElement = document.querySelector(".note")!;
+export async function updateNote(event: HTMLElement): Promise<ApiResponse | ApiError> {
     try {
-        const { data } = await axios.put<ApiResponse>(`https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${event.target.id}`, {
-            note: note.textContent
+        const { data } = await axios.put<ApiResponse>(`https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${event.id}`, {
+            note: event.textContent
         }, {
             headers: {
                 'Content-Type': 'application/json',
@@ -29,13 +28,19 @@ export async function updateNote(event: any): Promise<ApiResponse | ApiError> {
 //change the css design when updating is in progress
 export function update(event: any) {
     let textArea: HTMLElement = document.querySelector(".note")!;
+    let allTextArea: NodeListOf<HTMLElement> = document.querySelectorAll(".note")!;
+    allTextArea.forEach(element => {
+        if (event.target.id == element.id) {
+            textArea = element;
+        }
+    });
     if (edit == false) {
         textArea.style.backgroundColor = "#DFDFDF"
         textArea.contentEditable = "true";
         edit = true;
     }
     else {
-        updateNote(event);
+        updateNote(textArea);
         textArea.style.backgroundColor = "white"
         textArea.contentEditable = "false";
         edit = false

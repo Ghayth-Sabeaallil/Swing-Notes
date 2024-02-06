@@ -48,6 +48,7 @@ export function setupReadDiv(element: HTMLElement) {
         pDate.innerHTML += value.notes![i]?.createdAt + ",";
         let pNote: HTMLElement = document.createElement("p");
         pNote.setAttribute("class", "note");
+        pNote.setAttribute("id", value.notes![i]?.id);
         pNote.innerHTML += value.notes![i]?.note;
         let pUsername: HTMLElement = document.createElement("p");
         pUsername.setAttribute("class", "username");
@@ -55,8 +56,8 @@ export function setupReadDiv(element: HTMLElement) {
         let btn: HTMLButtonElement = document.createElement("button");
         btn.setAttribute("class", "uppdate");
         btn.innerHTML += "Uppdatera";
-        btn.addEventListener("click", update)
         btn.setAttribute("id", value.notes![i]?.id);
+        btn.addEventListener("click", update)
         let pDel: HTMLElement = document.createElement("p");
         pDel.setAttribute("class", "delete");
         pDel.setAttribute("id", value.notes![i]?.id);
