@@ -46,9 +46,9 @@ export function setupWriteDiv(element: HTMLElement): void {
 
 //check if all inputs (title, note, username) are not empty
 function check(): void {
-  let userName: any = document.querySelector(".username-input");
-  let title: any = document.querySelector(".title-input");
-  let note: any = document.querySelector(".note-input");
+  let userName: HTMLInputElement = document.querySelector(".username-input")!;
+  let title: HTMLInputElement = document.querySelector(".title-input")!;
+  let note: HTMLInputElement = document.querySelector(".note-input")!;
   if (title.value.length != 0 && note.value.length != 0 && userName.value.length != 0) {
     postNote().then(
       (value) => {

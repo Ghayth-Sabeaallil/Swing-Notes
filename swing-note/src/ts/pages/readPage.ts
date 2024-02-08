@@ -24,7 +24,7 @@ export function setupSearch(element: HTMLElement): void {
     if (searchInput.value.length > 0) {
       if (searchClick > 0) {
         if (document.querySelector(".readDiv")?.hasChildNodes() == true) {
-          let el: any = document.querySelector(".allNote");
+          let el: HTMLElement = document.querySelector(".allNote")!;
           removeRead(el);
         }
       }

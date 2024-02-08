@@ -18,10 +18,3 @@ export interface ApiError {
   message?: string;
   status: number;
 }
-
-export interface eventTarget {
-  target: targetId;
-}
-export interface targetId {
-  id: number;
-}
