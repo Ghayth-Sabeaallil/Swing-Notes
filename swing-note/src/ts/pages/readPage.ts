@@ -10,7 +10,7 @@ let searchClick: number = 0;
 
 //setup the search input the top center of the page
 //remove the previous search result using remove childNode 
-export function setupSearch(element: HTMLElement) {
+export function setupSearch(element: HTMLElement): void {
   let searchDiv: HTMLElement = document.createElement("div");
   searchDiv.setAttribute("class", "searchDiv");
   let btn: HTMLButtonElement = document.createElement("button");
@@ -45,7 +45,7 @@ export function setupSearch(element: HTMLElement) {
 }
 
 //setup the notes div 
-export function setupReadDiv(element: HTMLElement) {
+export function setupReadDiv(element: HTMLElement): void {
   getNotes().then(
     (value) => {
       let notes: number = value.notes?.length!;
@@ -95,7 +95,7 @@ export function setupReadDiv(element: HTMLElement) {
 }
 
 //remove the write page
-export function removeWrite(element: HTMLElement) {
+export function removeWrite(element: HTMLElement): void {
   let child: any = element.lastElementChild;
   while (element.lastElementChild) {
     element.removeChild(child);

@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 
 //remvoe the read page
-export function removeRead(element: HTMLElement) {
+export function removeRead(element: HTMLElement): void {
   let child: any = element.lastElementChild;
   while (element.lastElementChild) {
     element.removeChild(child);
@@ -16,7 +16,7 @@ export function removeRead(element: HTMLElement) {
 }
 
 //setup the write inputs div
-export function setupWriteDiv(element: HTMLElement) {
+export function setupWriteDiv(element: HTMLElement): void {
   let div: HTMLElement = document.createElement("div");
   div.setAttribute("class", "writeDiv");
   let input: HTMLInputElement = document.createElement("input");

@@ -1,7 +1,7 @@
 import { read } from "../../main";
 
 //setup the home icon to the left button side
-export function setupHomeIcon(element: HTMLElement) {
+export function setupHomeIcon(element: HTMLElement): void {
     let img: HTMLImageElement = document.createElement("img");
     img.setAttribute("class", "post-icon");
     img.setAttribute("src", "./src/img/home.png");
