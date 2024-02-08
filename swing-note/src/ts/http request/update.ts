@@ -1,6 +1,7 @@
 import axios from "axios";
 import { ApiResponse } from "../interface/interfaces";
 import { ApiError } from "../interface/interfaces";
+import Swal from 'sweetalert2'
 
 
 let edit: boolean = false;
@@ -44,6 +45,11 @@ export function update(event: any) {
         textArea.style.backgroundColor = "white"
         textArea.contentEditable = "false";
         edit = false
+        Swal.fire({
+            title: "Update",
+            text: "The Note has been updated.",
+            icon: "success"
+        });
     }
 
 }

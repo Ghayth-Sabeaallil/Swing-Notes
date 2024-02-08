@@ -99,6 +99,7 @@ body {
 .searchDiv {
   display: flex;
   justify-content: center;
+  gap: 2rem;
 }
 .searchDiv .search-input {
   padding: 1em 1em 1em 1em;
@@ -116,6 +117,21 @@ body {
   margin-bottom: 1em;
   border-radius: 5px;
   border: none;
+}
+.searchDiv .search-btn {
+  width: fit-content;
+  height: 70px;
+  padding: 0px 20px;
+  background-color: #EF4343;
+  font-family: "PT sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 18.12px;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #EF4343;
+  color: white;
 }
 
 body .post-icon {

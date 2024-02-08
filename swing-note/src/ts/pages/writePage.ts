@@ -1,5 +1,7 @@
 import { postNote } from "../http request/post";
 import { read } from "../../main";
+import Swal from 'sweetalert2'
+
 
 //remvoe the read page
 export function removeRead(element: HTMLElement) {
@@ -52,6 +54,11 @@ function check(): void {
       (value) => {
         if (value.message == "Note created!") {
           read();
+          Swal.fire({
+            title: "Create",
+            text: "Note created!",
+            icon: "success"
+          });
         }
       },
       (reason) => {
