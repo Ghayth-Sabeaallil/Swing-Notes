@@ -18,7 +18,7 @@ export async function updateNote(event: HTMLElement): Promise<ApiResponse | ApiE
         }
         )
         return data;
-    } catch (error: any) {
+    } catch (error: ApiError | any) {
         return {
             message: error.message,
             status: error.response.status,

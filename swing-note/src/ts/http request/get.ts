@@ -11,7 +11,7 @@ export async function getNotes(): Promise<ApiResponse | ApiError> {
       `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${user}`
     );
     return data;
-  } catch (error: any) {
+  } catch (error: ApiError | any) {
     return {
       message: error.message,
       status: error.response.status,

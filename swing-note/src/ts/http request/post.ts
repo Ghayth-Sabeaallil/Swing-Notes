@@ -19,7 +19,7 @@ export async function postNote(): Promise<ApiResponse | ApiError> {
         }
         )
         return data;
-    } catch (error: any) {
+    } catch (error: ApiError | any) {
         return {
             message: error.message,
             status: error.response.status,
